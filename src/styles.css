@@ -1,1 +1,252 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --main-background-color: #ffffff;
+  --main-button-color: #000000;
+  --main-button-color-light: #ffffff;
+  --main-text-color: #000000;
+  --main-text-color-light: #fff;
+  --main-gray-color: #6B7280;
+  --footer-background-color: #111111;
+  --border-color: #D8DADC;
+  --main-subbutton-color: #F5F5F5;
+  --rating-color-gray: #9F9F9F;
+  --color-link-blue: #3869EB;
+  --success-color: #22e077;
+  --error-color: #F54135;
+
+  --font-family-dm-sans: "DM Sans", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
+}
+
+body{
+  font-family: var(--font-family-dm-sans);
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  font-weight: 300;
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+}
+
+a, u{
+  text-decoration: none;
+  color: var(--main-gray-color);
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+/*-----------------------------------*/
+/* ---------- Auth Styles ---------- */
+/*-----------------------------------*/
+
+.auth{
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+}
+
+.auth-form{
+  max-width: 480px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.auth-title{
+  font-size: 40px;
+  font-family: var(--font-family-poppins);
+  margin-top: 50px;
+}
+
+.auth-text{
+  font-family: var(--font-family-dm-sans);
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.auth-subtitle{
+  font-family: var(--font-family-dm-sans);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.auth-input{
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: var(--font-family-dm-sans);
+  font-size: 18px;
+  color: var(--main-gray-color);
+  width: 460px;
+  height: 55px;
+  margin-bottom: 15px;
+  color: var(--main-text-color);
+}
+
+.auth__actions-inner{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.auth-checkbox{
+  width: 20px;
+  height: 20px;
+}
+
+.auth-label{
+  font-family: var(--font-family-dm-sans);
+  color: var(--main-gray-color);
+  margin-left: 5px;
+  position: relative;
+  top: -4px;
+  font-weight: 400;
+}
+
+.forgot-pass{
+  cursor: pointer;
+  font-weight: 400;
+  transition: .4s;
+}
+
+.forgot-pass:hover{
+  opacity: .7;
+}
+
+
+.auth__submit-btn{
+  border: 1px solid var(--main-button-color);
+  font-size: 16px;
+  font-weight: 700;
+  width: 310px;
+  height: 55px;
+  background-color: var(--main-button-color);
+  color: var(--main-button-color-light);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .5s;
+  margin-top: 50px;
+}
+
+.auth__submit-btn:hover{
+  background-color: var(--main-button-color-light);
+  color: var(--main-button-color);
+}
+
+.have-account-inner{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.have-account-text{
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-gray-color);
+  margin-right: 5px;
+}
+
+.have-account-link{
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-link-blue);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.have-account-link:hover{
+  opacity: 0.8;
+}
+
+.social__sign-inner{
+  margin-top: 100px;
+}
+
+.social__sign__top-inner{
+  display: flex;
+}
+
+.social__sign-line{
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.social__sign-text{
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 160px;
+  position: relative;
+  color: var(--main-gray-color);
+  top: -10px;
+}
+
+.social__sign__items-inner{
+  justify-content: center;
+  display: flex;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.social__sign-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+}
+
+.code-form{
+  max-width: 380px;
+}
+
+.code__input-inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.code-input{
+  height: 55px;
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-family: arimo;
+  font-size: 1.2rem;
+  background: var(--main-background-color);
+  border: 1px solid var(--border-color);
+  font-family: var(--dm-sans-font);
+  outline: none;
+  font-size: 20px;
+}
+
