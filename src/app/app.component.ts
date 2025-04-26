@@ -1,8 +1,10 @@
 import {Component, inject} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {HeaderBaseComponent} from './pages/shared/header-base/header-base.component';
-import {FooterBaseComponent} from './pages/shared/footer-base/footer-base.component';
-import {RegisterServiceService} from './data/services/register/register-service.service';
+import {HeaderBaseComponent} from './layout/header-base/header-base.component';
+import {FooterBaseComponent} from './layout/footer-base/footer-base.component';
+import {GetProductCatalogService} from './core/services/get-product-catalog.service';
+import {ProductMiniViewModel} from './core/models/product/ProductMiniViewModel';
+import {AuthService} from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +14,9 @@ import {RegisterServiceService} from './data/services/register/register-service.
 })
 export class AppComponent {
   title = 'RenStore';
+
+  catalogService = inject(GetProductCatalogService);
+  authService = inject(AuthService);
+
+  products : ProductMiniViewModel[] = [];
 }

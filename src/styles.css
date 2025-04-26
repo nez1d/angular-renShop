@@ -157,6 +157,7 @@ a, u{
 
 .auth__submit-btn:hover{
   background-color: var(--main-button-color-light);
+  border: 1px solid var(--border-color);
   color: var(--main-button-color);
 }
 
